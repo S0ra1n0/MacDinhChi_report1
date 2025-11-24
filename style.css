@@ -1,0 +1,7 @@
+.start {
+  color: blue;
+}
+
+.start:hover {
+  color: red;
+}
