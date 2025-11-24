@@ -8,6 +8,7 @@
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
     --color-md: #0E36BF;
+    --background-color:#0E6FF1
 */
 
 body {
@@ -17,7 +18,7 @@ body {
   justify-content: flex-start;
   margin: 0;
   min-height: 100vh;
-  background: #fff;
+  background: #ecf570;
 }
 
 /* ensure header and other top-level sections render above the viewer */
@@ -53,7 +54,7 @@ footer {
   padding: 13px 24px;
   display: flex;
   justify-content: center;
-  background: transparent;
+  background: white;
   align-items: center;
 }
 
@@ -78,6 +79,29 @@ footer {
   font-weight: bolder;
 }
 
+.image-container {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.schoolimage {
+  width: 60%;
+}
+
+.clock {
+  justify-content: center;
+  gap: 4px;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  padding: 18px 0;
+  order: 4;
+  background-color: #f9f9f9;
+}
+
 /* viewer centered below the header */
 #docx-viewer {
   order: 98; /* appear after header and .School */
@@ -85,7 +109,6 @@ footer {
   max-width: 960px;
   padding: 24px;
   box-sizing: border-box;
-  margin-top: 12px;
   background: #fff;
 }
 
