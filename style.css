@@ -88,7 +88,7 @@ footer {
 }
 
 .schoolimage {
-  width: 60%;
+  width: 70%;
 }
 
 .clock {
@@ -100,154 +100,54 @@ footer {
   width: 100%;
   padding: 18px 0;
   order: 4;
-  background-color: #f9f9f9;
+  background-color: #e6e6e6;
 }
 
-.buttons {
-  --r: 110px;
-  order: 4;
-  position: relative;
-  margin: 260px 0;
-  display: inline-block;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-}
-
-.button-primary {
-  background-color: white;
-  color: black;
-  padding: 12px 28px;
-  font-size: 1.125rem;
-  display: inline-block;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-}
-
-.buttons .button-secondary {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-}
-
-.buttons .button-secondary.show {
-  transition: ease-in-out 0.2s;
-  display: inline-block !important;
-}
-
-.button-secondary {
-  padding: 12px 28px;
-  font-size: 1.125rem;
-  display: inline-block;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  background-color: white;
-  color: black;
-}
-
-.buttons .button-secondary:nth-of-type(1) {
-  transform: translate(-50%, -50%) rotate(-90deg)
-    translateY(calc(-1 * var(--r))) rotate(90deg);
-} /* top */
-.buttons .button-secondary:nth-of-type(2) {
-  transform: translate(-50%, -50%) rotate(-18deg)
-    translateY(calc(-1 * var(--r))) rotate(18deg);
-} /* upper-right */
-.buttons .button-secondary:nth-of-type(3) {
-  transform: translate(-50%, -50%) rotate(54deg) translateY(calc(-1 * var(--r)))
-    rotate(-54deg);
-} /* lower-right */
-.buttons .button-secondary:nth-of-type(4) {
-  transform: translate(-50%, -50%) rotate(126deg)
-    translateY(calc(-1 * var(--r))) rotate(-126deg);
-} /* lower-left */
-.buttons .button-secondary:nth-of-type(5) {
-  transform: translate(-50%, -50%) rotate(198deg)
-    translateY(calc(-1 * var(--r))) rotate(-198deg);
-} /* upper-left */
-
-.button-primary:hover {
-  background-color: #d3d3d3;
-  color: white;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-}
-
-.button-primary:active {
-  background-color: #8397da;
-  color: #fff;
-  outline: none;
-  transition: background-color 0.15s ease, transform 0.12s ease;
-}
-
-.button-primary.active {
-  background-color: #6f86d6;
-  color: #fff;
-  box-shadow: 0 6px 14px rgba(14, 54, 191, 0.12);
-}
-
-.button-primary.active:hover {
-  background-color: #5e73c2;
-}
-
-.button-secondary:hover {
-  background-color: #d3d3d3;
-  color: black;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-}
-
-.buttons .button-primary,
-.buttons .button-secondary {
-  z-index: 1002;
-}
-
-body.dimmed::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  pointer-events: none; /* allow clicks through to interactive elements above */
-  z-index: 500;
-  transition: opacity 0.18s ease;
-}
-
-.show {
-  display: block;
-  transition: ease-in-out 0.2s;
-}
-
-/* viewer centered below the header */
-/*
-#docx-viewer {
-  order: 98;
+.navigation {
+  order: 5;
   width: 100%;
-  max-width: 960px;
-  padding: 24px;
+  background: #ffffff;
   box-sizing: border-box;
-  background: #fff;
+  display: flex;
+  justify-content: center;
 }
-*/
-/* better default typography for converted content */
-/*
-#docx-viewer * {
-  line-height: 1.45;
-  color: #111;
+
+.navigation .current {
+  background-color: #0e36bf !important;
+  color: white !important;
+  font-weight: bolder;
 }
-*/
-/* make links inside converted docx follow the page color */
-/*
-#docx-viewer a {
-  color: inherit;
-  text-decoration: underline;
+
+.navigation .current:hover {
+  background-color: #0e2675 !important;
 }
-*/
-/* header typography */
+
+.navigation a {
+  flex-grow: 1;
+  display: block;
+  text-align: center;
+
+  text-decoration: none;
+  color: #333;
+  padding: 12px 10px;
+  transition: background-color 0.3s ease;
+
+  border-right: none;
+}
+
+.navigation a:hover {
+  background-color: #d3d3d3;
+}
+
+.content {
+  order: 6;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 24px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 header h1 {
   margin: 0;
   font-size: 1.25rem;
@@ -258,18 +158,5 @@ header h1 {
 @media (max-width: 600px) {
   header h1 {
     font-size: 1rem;
-  }
-  /*
-  #docx-viewer {
-    padding: 16px;
-  }
-  */
-  .buttons {
-    --r: 70px;
-    margin: 140px 0;
-  }
-  .buttons .button-secondary {
-    padding: 8px 12px;
-    font-size: 0.95rem;
   }
 }
